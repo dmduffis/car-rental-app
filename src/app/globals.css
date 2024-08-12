@@ -11,6 +11,8 @@
 }
 
 body {
+  padding: 0 auto;
+  margin: 0;
 }
 
 @layer utilities {
