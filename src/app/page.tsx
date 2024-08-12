@@ -1,10 +1,11 @@
-import Image from "next/image";
-
+"use client"
+import Hero from "@/components/Home/Hero";
 
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    </main>
+    <div className="p-5 sm:px-10 md:px-20">
+      <Hero />
+    </div>
   );
 }
