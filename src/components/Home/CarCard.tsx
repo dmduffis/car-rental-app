@@ -1,15 +1,21 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaGasPump } from 'react-icons/fa'
 import { MdAirlineSeatReclineNormal } from 'react-icons/md'
 import { PiSteeringWheelFill } from 'react-icons/pi'
 
 function CarCard(props:any) {
-    const[car, setCar] = useState(props.car)
+    const[car, setCar] = useState<any>()
     
-    return (
+    useEffect(() => {
+      if(props.car) {
+        setCar(props.car)
+      }
+    }, [props.car])
 
-    <div className='group bg-gray-50 rounded-3xl p-2 sm:p-4 hover:bg-white hover:border-[1px] cursor-pointer border-blue-500'>
+    return car && (
+
+    <div className='group bg-gray-50 rounded-3xl p-2 sm:p-4 hover:bg-white hover:border-[1px] cursor-pointer border-blue-500 mt-4'>
       <h2 className='text-[20px] font-medium mb-2'>{car.name}</h2>
       <h2 className='text-[28px] font-bold mb-2'>
       <span className='text-[12px] font-light'>$ </span>
@@ -26,7 +32,7 @@ function CarCard(props:any) {
       <div className='flex justify-around group-hover:hidden'>
       <div className='text-center text-gray-500'>
         <PiSteeringWheelFill className='w-full text-[22px] mb-2 />' />
-        <h2 className='line-clamp-5 text-[12px] font-light uppercase'>{car.carType}</h2>
+        <h2 className='line-clamp-5 text-[14px] font-light uppercase'>{car.carType}</h2>
       </div>
 
       <div className='text-center text-gray-500'>
