@@ -7,6 +7,7 @@ export const getCarsList= async () => {
     carAvg
     carType
     name
+    seats
     image {
       url
     }

@@ -12,9 +12,9 @@ function NavBar() {
         />
 
         <div className="hidden md:flex gap-5">
-            <h2 className='hover:bg-blue-500 p-2 rounded-full hover:text-white px-3 hover:cursor-pointer'>Home</h2>
-            <h2 className='hover:bg-blue-500 p-2 rounded-full hover:text-white px-3 hover:cursor-pointer'>History</h2>
-            <h2 className='hover:bg-blue-500 p-2 rounded-full hover:text-white px-3 hover:cursor-pointer'>Contact Us</h2>
+            <h2 className='hover:bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded-full hover:text-white px-3 hover:cursor-pointer'>Home</h2>
+            <h2 className='hover:bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded-full hover:text-white px-3 hover:cursor-pointer'>History</h2>
+            <h2 className='hover:bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded-full hover:text-white px-3 hover:cursor-pointer'>Contact Us</h2>
         </div>
 
         <UserButton />
